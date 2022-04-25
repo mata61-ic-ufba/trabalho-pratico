@@ -76,6 +76,7 @@ em branco (ascii 32),
 \r (retorno de carro, ascii 13), 
 \t (tab, ascii 9), 
 \v (vertical tab, ascii 11).
+```
 
 ### Símbolos
 
