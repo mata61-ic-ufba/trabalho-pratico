@@ -30,11 +30,13 @@ mas que não são tratados como palavras-chave.
 ### Strings
 
 Strings são cadeias de caracteres colocadas entre aspas duplas ```"..."```.
-Dentro de uma string, uma sequência ‘\c’ denota o caractere ‘c’, com as seguintes exceções:```
+Dentro de uma string, uma sequência ‘\c’ denota o caractere ‘c’, com as seguintes exceções:
+```
 \b backspace 
 \t tab
 \n newline 
 \f formfeed
+```
 
 Um caractere \n sem escape "\\" não pode aparecer em uma string:
 ```
@@ -112,6 +114,41 @@ Quaisquer caracteres entre dois traços “--” e o próximo \n
 ### Erros Léxicos
 
 + Caracter desconhecido, por exemplo, '?'
++ String inválida (com '\0')
 + String inválida (mais de uma linha sem '\')
 + Final de arquivo encontrado
    - String aberta, sem aspas no final.
+
+## Exemplos
+
+#### comentário
+
+```
+-- isso é um comentário de uma linha
+```
+
+#### caracter desconhecido
+
+```
+-- linha 20
+a ? b
+
+(21, ID, "a")
+(21, ERROR, "?")
+(21, ID, "b"(
+```
+
+#### cadeia mal-formada (falta o caracter de escape antes de \n)
+```
+-- linha 4
+s <- "uma cadeia 
+com mais 
+de uma linha \0"
+
+
+(5, ID, "s")
+(5, SYM, "<-")
+(5, ERROR, "....") ???
+
+```
+
