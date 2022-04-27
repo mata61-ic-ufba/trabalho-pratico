@@ -1,4 +1,4 @@
-# Trabalho Prático
+# Trabalho Prático - 2022.1
 
 __Objetivo__: Construir um compilador completo que aceita um programa em linguagem de alto nível como entrada e produz um programa equivalente em linguagem objeto como saída.
 
@@ -27,4 +27,5 @@ Com base na especificação válida para ICL em Bison, construir um verificador 
 Construir um gerador de código que percorre a AST construída para o programa fonte em ICL e gera o programa objeto em ICO.
 
 ### Outros
+
 * Prettyprint: Programa que percorre a AST construída para um programa ICL e gera sua representação no formato "labelled bracket".
