@@ -14,7 +14,6 @@ Seu compilador (_iclc_) traduz programas ICL para programas em MIPS (assembly la
 ```
 iclc i1.icl  // compilador ICL gera código MIPS
 spim i1.s     // assembler
-
 ```
 
 ## Características
