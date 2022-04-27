@@ -4,7 +4,7 @@ __Objetivo__: Construir um compilador completo que aceita um programa em linguag
 
 ## Linguagens
 
-* Linguagem fonte: linguagem de alto nível __ICL__
+* Linguagem fonte: linguagem de alto nível [ICL](./ICL)
 * Linguagem objeto: linguagem de montagem __ICO__
 
 ## Partes do compilador
