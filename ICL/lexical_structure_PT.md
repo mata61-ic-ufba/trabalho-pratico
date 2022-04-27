@@ -14,7 +14,7 @@ Outros elementos a considerar:
 - comentários
 - erros léxicos.
 
-### Inteiros e identificadores
+### Inteiros (NUM) e identificadores (ID)
 
 - Inteiros são cadeias não vazias de dígitos de 0 a 9.
 - Identificadores são cadeias de caracteres (exceto palavras-chave) 
@@ -51,9 +51,10 @@ OK"
 - Qualquer outro caractere pode ser incluído em uma string. 
 - Strings não podem cruzar os limites do arquivo (abre e fecha aspas).
 
-### Palavras-chave
+### Palavras-chave (_keywords_)
 
-As palavras-chave de ICL são: 
+As palavras-chave de ICL são reservadas.
+
 ```
 class, else, false, fi, if, in, inherits, isvoid, let, loop, 
 pool, then, while, case, esac, new, of, not, true
@@ -67,7 +68,7 @@ Para estar em conformidade com as regras para outros objetos,
 _a primeira letra das constantes true e false deve ser minúscula_ e
 as letras finais podem ser maiúsculas ou minúsculas.
 
-### Símbolos
+### Símbolos especiais
 
 #### Operadores binários e unários
 
@@ -91,9 +92,9 @@ not
 
 O contexto de uso de cada símbolo será apresentado abaixo.
 
-### Espaço em branco
+### Caracteres de espacejamento (_white space_) 
 
-Caracteres de espacejamento (espaço em branco) 
+Caracteres de espacejamento
 consistem em qualquer sequência de caracteres: 
 
 ```
@@ -112,6 +113,7 @@ Quaisquer caracteres entre dois traços “--” e o próximo \n
 
 ### Erros Léxicos
 
-+ Símbolo inválido
++ Caracter desconhecido, por exemplo, '?'
++ String inválida (mais de uma linha sem '\')
 + Final de arquivo encontrado
-
+   - String aberta, sem aspas no final.
