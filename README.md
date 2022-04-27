@@ -7,7 +7,14 @@ __Objetivo__: Construir um compilador completo que aceita um programa em linguag
 * Linguagem fonte: linguagem de alto nível [ICL](./ICL)
 * Linguagem objeto: linguagem de montagem __ICO__
 
-## Partes do compilador
+## Atividades
+
++ Escrever um programa em ICL
++ Implementar analisador léxico
++ Implementar analisador sintático
++ Implementar analisador semântico
++ Implementar gerador de código
+
 ### Analisador léxico
 
 Construir um analisador léxico para ICL que lê um arquivo fonte e produz uma lista de tokens, um a um, anotados com seu tipo (identificador, inteiro, cadeia, etc.) e sua posição no arquivo fonte (número da linha). Se uma entrada inválida for descoberta, gerar uma mensagem de erro, fazer a recuperação do erro e continuar. Definir um conjunto de testes para descobrir casos de erros léxicos típicos, envolvendo cadeias, comentários, etc.
@@ -28,4 +35,4 @@ Construir um gerador de código que percorre a AST construída para o programa f
 
 ### Outros
 
-* Prettyprint: Programa que percorre a AST construída para um programa ICL e gera sua representação no formato "labelled bracket".
+* Prettyprint: Programa que percorre a AST construída para um programa ICL e gera sua representação no formato "_labelled bracket_".
