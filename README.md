@@ -10,7 +10,7 @@ __Objetivo__: Construir um compilador completo que aceita um programa em linguag
 ## Atividades
 
 + Escrever um programa em ICL
-+ Implementar analisador léxico
++ [Implementar analisador léxico](./1-lexico)
 + Implementar analisador sintático
 + Implementar analisador semântico
 + Implementar gerador de código
