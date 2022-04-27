@@ -36,7 +36,7 @@ Dentro de uma string, uma sequência ‘\c’ denota o caractere ‘c’, com as
 \n newline 
 \f formfeed
 
-Um caractere \n sem escape "\" não pode aparecer em uma string:
+Um caractere \n sem escape "\\" não pode aparecer em uma string:
 ```
 "Esse exemplo\
 está bom"
@@ -76,11 +76,9 @@ as letras finais podem ser maiúsculas ou minúsculas.
 .
 @
 ~ 
-isvoid 
 * / 
 + -
 <= < = 
-not
 <-
 =>
 ```
