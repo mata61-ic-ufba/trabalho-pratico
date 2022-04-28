@@ -23,54 +23,54 @@ spim i1.s     // assembler
 
 ### classes e métodos
 ```
-class Main {   // classe
-   main():Int { 1; }; // método com tipo Int
+class Main {   -- classe
+   main():Int { 1; }; -- método simples com tipo Int
 };
 ```
 
 ### I/O
 
 ```
-class Main {   // classe
+class Main { 
 
-   i : IO;     // atributo do tipo IO
-   main():Int { i.out_string("Hello World!"; 1; };  // método com dois comandos
+   i : IO;     -- atributo do tipo IO
+   main():Int { i.out_string("Hello World!"); 1; };  -- método com dois comandos
 };
 ```
 
 ### blocos
 ```
-class Main {   // classe
+class Main { 
 
-   i : IO;  // só declaração, sem alocação de memória
-   main():Int { { i.out_string("Hello World!\n"; 1; } }; // método com bloco e dois comandos
+   i : IO;  -- só declaração, sem alocação de memória
+   main():Int { { i.out_string("Hello World!\n"; 1; } }; -- método com bloco e dois comandos
 };
 ```
 
 ### instanciação
 
 ```
-class Main {   // classe
+class Main {  
 
-   i : IO <- new IO; // criação de objeto
-   main():Int { { i.out_string("Hello World!\n"; 1; } }; 
+   i : IO <- new IO; -- criação de objeto
+   main():Int { { i.out_string("Hello World!\n"); 1; } }; 
 };
 ```
 
 ### arrumando a casa
 ```
-class Main {   // classe
+class Main {   
 
    i : IO <- new IO;
-   main(): Object { i.out_string("Hello World!\n" }; // apagar "1" e bloco
+   main(): Object { i.out_string("Hello World!\n"); }; -- apagar "1" e bloco
    
 };
 ```
 
 ```
-class Main {   // classe
+class Main { 
 
-   main(): Object { (new IO).out_string("Hello World!\n" }; // apagar atributo "i"
+   main(): Object { (new IO).out_string("Hello World!\n"); }; -- remover atributo "i"
    
 };
 ```
@@ -78,9 +78,9 @@ class Main {   // classe
 ### herança
 
 ```
-class Main inherits IO {   // classe, herança
+class Main inherits IO {  -- Main herda de IO
 
-   main(): Object { (new IO).out_string("Hello World!\n" }; // apagar atributo "i"
+   main(): Object { (new IO).out_string("Hello World!\n"); }; 
    
 };
 ```
@@ -88,9 +88,9 @@ class Main inherits IO {   // classe, herança
 ### self 
 
 ```
-class Main inherits IO {   // classe, herança
+class Main inherits IO { 
 
-   main(): Object { self.out_string("Hello World!\n" }; // usar self
+   main(): Object { self.out_string("Hello World!\n"); }; -- usar self
    
 };
 ```
@@ -99,9 +99,9 @@ class Main inherits IO {   // classe, herança
 
 
 ```
-class Main inherits IO {   // classe, herança
+class Main inherits IO { 
 
-   main(): Object { out_string("Hello World!\n" }; // self implicito
+   main(): Object { out_string("Hello World!\n"); }; -- self implicito
    
 };
 ```
