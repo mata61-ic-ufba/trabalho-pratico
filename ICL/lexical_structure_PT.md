@@ -16,12 +16,12 @@ Outros elementos a considerar:
 
 ### Inteiros (NUM) e identificadores (ID)
 
-- Inteiros são cadeias não vazias de dígitos de 0 a 9.
-- Identificadores são cadeias de caracteres (exceto palavras-chave) 
+- Inteiros (NUM) são cadeias não vazias de dígitos de 0 a 9.
+- Identificadores (ID) são cadeias de caracteres (exceto palavras-chave) 
 iniciadas por letra (a-zA-Z) ou caractere sublinhado ```_```, e seguido por 
 0 ou mais ocorrências de  letras, dígitos de 0 a 9 ou ```_```.
-- Identificadores _de tipos_ começam com uma letra maiúscula.
-- Identificadores _de objetos_ começam com uma letra minúscula.
+   - Identificadores _de tipos_ começam com uma letra maiúscula.
+   - Identificadores _de objetos_ começam com uma letra minúscula.
 
 Há dois outros identificadores, ```self``` e ```SELF TYPE``` 
 que são considerados como especiais pela linguagem, 
@@ -29,7 +29,7 @@ mas que não são tratados como palavras-chave.
 
 ### Strings
 
-Strings são cadeias de caracteres colocadas entre aspas duplas ```"..."```.
+Strings são cadeias de caracteres colocadas entre aspas duplas ```" e "```.
 Dentro de uma string, uma sequência ‘\c’ denota o caractere ‘c’, com as seguintes exceções:
 ```
 \b backspace 
@@ -38,28 +38,32 @@ Dentro de uma string, uma sequência ‘\c’ denota o caractere ‘c’, com as
 \f formfeed
 ```
 
-Um caractere \n sem escape "\\" não pode aparecer em uma string:
+O caractere de espacejamento \n,  se não for precedido por _escape_ "\\" não pode aparecer em uma string:
 ```
-"Esse exemplo\
+-- string continua na próxima linha
+"Esse exemplo \  
 está bom"
 ```
 ```
-"Esse não está
+-- sem caractere de escape
+"Esse não está  
 OK"
 ```
 
 - Uma string não pode conter EOF.
 - Uma string não pode conter _null_ (caractere \0).
 - Qualquer outro caractere pode ser incluído em uma string. 
-- Strings não podem cruzar os limites do arquivo (abre e fecha aspas).
+- Strings não podem cruzar os limites do arquivo (abre e fecha aspas no mesmo arquivo).
+
+(Obs.: Refletir sobre o uso de ```%x STRING```.)
 
 ### Palavras-chave (_keywords_)
 
 As palavras-chave de ICL são reservadas.
 
 ```
-class, else, false, fi, if, in, inherits, isvoid, let, loop, 
-pool, then, while, case, esac, new, of, not, true
+case, esac, of, class, else, fi, if, then, in, inherits, 
+isvoid, let, while, loop, pool, new, not, true, false
 ``` 
 
 Exceto pelas constantes *true* e *false*, 
@@ -135,7 +139,7 @@ a ? b
 
 (21, ID, "a")
 (21, ERROR, "?")
-(21, ID, "b"(
+(21, ID, "b")
 ```
 
 #### cadeia mal-formada (falta o caracter de escape antes de \n)
@@ -148,7 +152,7 @@ de uma linha \0"
 
 (5, ID, "s")
 (5, SYM, "<-")
-(5, ERROR, "....") ???
+(5, ERROR, "...") ???
 
 ```
 
