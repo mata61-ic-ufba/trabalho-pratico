@@ -3,8 +3,11 @@
 __Interesting Computing Language (ICL)__ 
 é uma linguagem de programação criada para um curso de um semestre da disciplina Compiladores, 
 fortemente inspirada na linguagem COOL (créditos em breve).
+É uma linguagem baseada em classes, expressões, com tipagem estática, etc.
 
-+ Expressões, classes, tipagem estática, gerenciamento de memória, etc.
++ [Aspectos Léxicos](./1-lexico)
++ Aspectos Sintáticos
++ Aspectos Semânticos
 
 ## Implementação
 
