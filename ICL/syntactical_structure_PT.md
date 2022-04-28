@@ -1,3 +1,3 @@
-# Syntax
+# Sintaxe
 
-Soon.
+Em breve.
