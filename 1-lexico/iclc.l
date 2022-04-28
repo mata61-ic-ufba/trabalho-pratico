@@ -3,7 +3,7 @@
  * Autora: Christina von Flach
  */
 
-%option noyywrap nodefault yylineno
+%option noyywrap yylineno
 
 %{
 #include "iclc.tab.h"
