@@ -5,9 +5,9 @@ __Interesting Computing Language (ICL)__
 fortemente inspirada na linguagem COOL (créditos em breve).
 É uma linguagem baseada em classes, expressões, com tipagem estática, etc.
 
-+ [Aspectos Léxicos](./1-lexico)
-+ Aspectos Sintáticos
-+ Aspectos Semânticos
++ [Aspectos Léxicos](./lexical_structure_PT.md)
++ [Aspectos Sintáticos](./syntactical_structure_PT.md)
++ [Aspectos Semânticos](./semantics_PT.md)
 
 ## Implementação
 
