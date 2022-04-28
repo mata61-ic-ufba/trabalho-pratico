@@ -87,14 +87,15 @@ Observar que há dois arquivos na pasta: __compile.sh__ e __run.sh__ para compil
 
 + __compile.sh__ (usa a ferramenta Flex com seu arquivo, obrigatoriamente chamado de iclc.l)
 ```
-bison -d iclc.y. // template apenas para definir tokens com %token
+bison -d iclc.y // template apenas para definir tokens com %token
 flex iclc.l  // colocar seu código FLEX em arquivo com nome "iclc.l"
 cc -o iclc lex.yy.c iclc.tab.c -ll  // compilar lex.yy.c e iclc.tab.c e gerar o código objeto com nome "iclc"
 ```
-+ __run.sh__ (recebe dois argumentos, sendo o primeiro o nome do arquivo de entrada (com extensão .icl) 
-e o segundo o nome do arquivo de saída (com extensão .s)
++ __run.sh__ (recebe um argumento, o nome do arquivo de entrada com extensão .icl 
+compila e gera arquivo de saída (com extensão .s)
 ```
-./iclc < $1 > $2  // executa o analisador léxico com entrada lida de $1 e saída escrita em $2
+name=$(basename $1 .icl)
+./iclc < $1 > $name.s" // executa o analisador léxico com entrada $1 (arquivo .icl) e gera a saída (arquivo .s)
 ```
 
 __Observação Importante sobre__ ___Line Endings___: 
