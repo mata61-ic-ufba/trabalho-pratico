@@ -65,7 +65,7 @@ a saída deverá ser gerada no arquivo i1.s:
 (3,SYM,"{")
 (3,ID,"out_string")
 (3,SYM,"(")
-(3,STRING,"Hello World!\n")
+(3,STRING,""Hello World!\n"")
 (3,SYM,")")
 (3,SYM,"}")
 (3,SYM,";")
