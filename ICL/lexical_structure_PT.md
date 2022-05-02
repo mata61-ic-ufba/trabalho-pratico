@@ -76,22 +76,18 @@ as letras finais podem ser maiúsculas ou minúsculas.
 
 ### Símbolos especiais
 
-#### Operadores binários e unários
-
 ```
 .
 @
 ~ 
 * / 
 + -
-<= < = 
+<=  <  = 
 <-
 =>
-```
-
-#### Separadores e pontuação
-```
-; , ( ) { } 
+: ; , 
+(  ) 
+{  } 
 ``` 
 
 O contexto de uso de cada símbolo será apresentado abaixo.
