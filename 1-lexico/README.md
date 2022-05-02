@@ -83,19 +83,18 @@ $ ./iclc < i1.icl > i1.s
 
 ## Scripts
 
-Observar que há dois arquivos na pasta: __compile.sh__ e __run.sh__ para compilar e executar o seu código:
+Observar que há dois arquivos na pasta: __makefile__ e __run_compiler.sh__ para compilar e executar o seu código:
 
-+ __compile.sh__ (usa a ferramenta Flex com seu arquivo, obrigatoriamente chamado de iclc.l)
++ Usa a ferramenta Flex com seu arquivo, obrigatoriamente chamado de iclc.l
 ```
-bison -d iclc.y // template apenas para definir tokens com %token
-flex iclc.l  // colocar seu código FLEX em arquivo com nome "iclc.l"
-cc -o iclc lex.yy.c iclc.tab.c -ll  // compilar lex.yy.c e iclc.tab.c e gerar o código objeto com nome "iclc"
+make       // rodar flex, bison, gcc
+make all
+make clean // apagar arquivos
 ```
-+ __run.sh__ (recebe um argumento, o nome do arquivo de entrada com extensão .icl 
-compila e gera arquivo de saída (com extensão .s)
++ __run_compiler.sh__ (recebe um argumento, o nome do arquivo de entrada com extensão .icl 
+compila (faz análise léxica, por enquanto) e gera arquivo de saída (com extensão .s)
 ```
-name=$(basename $1 .icl)
-./iclc < $1 > $name.s" // executa o analisador léxico com entrada $1 (arquivo .icl) e gera a saída (arquivo .s)
+./run_compiler.sh hello.icl // executa o analisador léxico com entrada hello.icl e gera a saída (hello.s)
 ```
 
 __Observação Importante sobre__ ___Line Endings___: 
