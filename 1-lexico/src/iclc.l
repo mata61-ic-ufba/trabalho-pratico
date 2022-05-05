@@ -7,10 +7,15 @@
 
 %{
 #include "iclc.tab.h"
+int const CCED = 231;
 %}
 
 %%
 
+[a-zA-Z_]+	{ return ID; }
+[\n ]+ 		{ }
+"ç" 		{ return CCED; }
+. 		{ return ERROR; }
 
 
 
@@ -39,6 +44,7 @@ int main(int argc, char **argv) {
          case SYM:
             fprintf(stdout,"(%d,SYM,\"%s\")\n", yylineno, yytext);
             break;
+	 default: fprintf(stdout,"(%d,CCED,\"%s\")\n", yylineno, yytext);
         }
     }
 }
