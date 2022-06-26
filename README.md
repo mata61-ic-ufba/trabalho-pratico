@@ -13,7 +13,7 @@ __Objetivo__: Construir um compilador completo que aceita um programa em linguag
 + [Implementar analisador léxico](./1-lexico)
 + [Implementar analisador sintático](./2-sintatico)
 + [Implementar analisador semântico](./3-semantico)
-+ [Implementar gerador de código](./4-geracao)
++ [Implementar gerador de código](./4-sintese)
 
 ### Analisador léxico
 
