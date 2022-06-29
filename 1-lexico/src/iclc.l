@@ -1,4 +1,5 @@
 /* 
+ * UFBA
  * Template para programa flex.
  * Autora: Christina von Flach
  * Utilização template: Elber Cerqueira
@@ -12,6 +13,10 @@
 
 %%
 
+[a-zA-Z_]+	{ return ID; }
+[\n ]+ 		{ }
+"ç" 		{ return TEST; }
+. 		{ return ERROR; }
 
 
 
@@ -40,6 +45,8 @@ int main(int argc, char **argv) {
          case SYM:
             fprintf(stdout,"(%d,SYM,\"%s\")\n", yylineno, yytext);
             break;
+         case TEST: break;
+	 default: fprintf(stdout,"(%d,CCED,\"%s\")\n", yylineno, yytext);
         }
     }
 }

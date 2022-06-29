@@ -24,6 +24,7 @@ int yylex();
 %token STRING
 %token SYM
 %token ERROR
+%token TEST
 
 %%
 
