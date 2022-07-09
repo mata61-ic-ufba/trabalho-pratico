@@ -2,6 +2,7 @@
  * UFBA
  * Template para programa flex.
  * Autora: Christina von Flach
+ * Utilização template: Elber Cerqueira
  */
 
 %option noyywrap yylineno
